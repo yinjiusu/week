@@ -1,0 +1,156 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "bundle": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.8.0",
+  "appid": "wx8d6be19a42bab801",
+  "projectname": "minapp_zfw",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "找房",
+          "pathName": "pages/find/find",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "资讯",
+          "pathName": "pages/news/news",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "个人中心",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "房源详情",
+          "pathName": "pages/fang/fang",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "资讯详情页",
+          "pathName": "pages/newsdetail/newsdetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "成为房东",
+          "pathName": "pages/landlord/landlord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "看房记录",
+          "pathName": "pages/history/history",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "看房通知",
+          "pathName": "pages/fangmsg/fangmsg",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人详情中心",
+          "pathName": "pages/personal/personal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "编辑个人资料",
+          "pathName": "pages/editpersonal/editpersonal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "身份认证",
+          "pathName": "pages/idcard/idcard",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索",
+          "pathName": "pages/search/search",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "我的收藏",
+          "pathName": "pages/collect/collect",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

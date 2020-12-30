@@ -1,0 +1,153 @@
+/* 搜索 */
+.searchBox {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 50rpx;
+  align-items: center;
+}
+.condition_item{
+  margin: 0;
+  padding: 0;
+  height: 57rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.price{
+  width: 241rpx;
+}
+.condition_item text{
+  height: 57rpx;
+  border-bottom: 1rpx solid grey;
+  margin: 0rpx 5rpx;
+  text-align: center;
+  width: 122rpx;
+}
+/* 没有数据通知 */
+.bottom{
+  text-align: center;
+  color: grey;
+  font-size: 32rpx;
+}
+.hide{
+  display: none;
+}
+.sview{
+  height: 1130rpx;
+}
+.font10 {
+  margin-left: 10rpx;
+  font-size: 10px;
+}
+
+.searchBox-input {
+  display: flex;
+  margin-left: 40rpx;
+  background: #fafafa;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 450rpx;
+  border-radius: 20rpx;
+  padding: 0 30rpx;
+  color: #a4a4a4;
+}
+.searchBox-input text {
+  margin-right: 20rpx;
+}
+
+/* 推荐房源 */
+.recommend {
+  margin-top: 3px;
+  background: #fff;
+  color: #474747;
+}
+.recommend-search {
+  display: flex;
+  justify-content: space-around;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.recommend-list {
+  border-top: 1px solid #cccccc;
+  display: flex;
+  padding: 20rpx;
+}
+.recommend-list image {
+  width: 350rpx;
+  height: 250rpx;
+}
+
+.recommend-list-item {
+  margin-left: 6rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recommend-list-item-spec {
+  color: #ccc;
+  font-size: 14px;
+}
+.recommend-list-item-tag text{
+  margin: 6rpx;
+}
+.recommend-list-item-price {
+  color: red;
+}
+.recommend-list-item-price text{
+  font-weight: bold;
+}
+
+.tag1{
+  padding: 10rpx;
+  background: #C5EDDC;
+  color: #5ECC9F;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.tag2{
+  padding: 10rpx;
+  background: #C3EBF0;
+  color: #39BECD;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.tag3{
+  padding: 10rpx;
+  background: #CDE6FE;
+  color: #5AABFD;
+  font-size: 12px;
+  border-radius: 5px;
+}
+/* 回到顶部 */
+.gototop{
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+  color: #ccc;
+}
+.font30{
+  font-size: 40px;
+}
+.nav{
+  position: relative;
+}
+.shadediv{
+ background: #fff;
+ width: 750rpx;
+ height: 300rpx;
+ position:absolute;
+ top: 80rpx;
+ z-index: 0;
+ display: flex;
+ opacity: 0;
+ flex-wrap: wrap;
+ /* justify-content: space-between; */
+ transition: all 1s;
+}
+.now{
+  transition: all 1s;
+  opacity: 1;
+  z-index: 1000;
+}

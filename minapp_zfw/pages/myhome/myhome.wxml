@@ -1,0 +1,47 @@
+<!-- 看房记录 -->
+<view class="recommend">
+  <scroll-view scroll-y="{{true}}" class="sview">
+    <view class="recommend">
+      <navigator class="recommend-list" open-type="navigate" url="/pages/fang/fang?id=1">
+        <view>
+          <image src="https://fang.1314000.cn/zfw/widget-it-1.png" />
+        </view>
+        <view class="recommend-list-item">
+          <view class="recommend-list-item-title">合租 - 双裕小区3居室-南卧</view>
+          <view class="recommend-list-item-spec">120平米 | 3室1厅</view>
+          <view class="recommend-list-item-tag">
+            <text class="tag1">押一付三</text>
+            <text class="tag2">免押金</text>
+            <text class="tag3">精装</text>
+          </view>
+          <view class="recommend-list-item-price">
+            <text>1500</text>
+            元/月
+          </view>
+        </view>
+      </navigator>
+      <navigator class="recommend-list" open-type="navigate" url="/pages/fang/fang?id=1">
+        <view>
+          <image src="https://fang.1314000.cn/zfw/widget-it-1.png" />
+        </view>
+        <view class="recommend-list-item">
+          <view class="recommend-list-item-title">合租 - 双裕小区3居室-南卧</view>
+          <view class="recommend-list-item-spec">120平米 | 3室1厅</view>
+          <view class="recommend-list-item-tag">
+            <text class="tag1">押一付三</text>
+            <text class="tag2">免押金</text>
+            <text class="tag3">精装</text>
+          </view>
+          <view class="recommend-list-item-price">
+            <text>1500</text>
+            元/月
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>
+<!-- 回到顶部 -->
+<view class="gototop">
+  <text class="iconfont font30 icon-fanhuidingbu"></text>
+</view>

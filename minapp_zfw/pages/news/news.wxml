@@ -1,0 +1,30 @@
+<!-- 搜索 -->
+<view class="searchBox">
+  <view class="searchBox-area">
+    <text>{{province}}</text>
+    <text class="iconfont icon-xiangxia font10"></text>
+  </view>
+  <view class="searchBox-input">
+    <text class="iconfont icon-sousuo1"></text>
+    <navigator open-type="navigate" url="">你想住在哪？</navigator>
+  </view>
+</view>
+<!-- 新闻列表 -->
+<view class="recommend">
+<block wx:for="{{news}}" wx:key="item">
+  <navigator class="recommend-list" open-type="navigate" url="/pages/newsdetail/newsdetail?id={{item.id}}">
+    <view>
+      <image src="{{item.image}}" />
+    </view>
+    <view class="recommend-list-item">
+      <view class="recommend-list-item-title">{{item.title}}</view>
+      <view class="recommend-list-item-desc" style="font-size:28rpx">{{item.spanish}}</view>
+      <view class="recommend-list-item-date">{{item.created_at}}</view>
+    </view>
+  </navigator>
+</block>
+</view>
+<!-- 回到顶部 -->
+<view class="gototop">
+  <text class="iconfont font30 icon-fanhuidingbu"></text>
+</view>

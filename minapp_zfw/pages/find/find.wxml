@@ -1,0 +1,85 @@
+<!-- 搜索 -->
+<view class="searchBox">
+  <view class="searchBox-area">
+    <text>{{province}}</text>
+    <text class="iconfont icon-xiangxia font10"></text>
+  </view>
+  <view class="searchBox-input">
+    <text class="iconfont icon-sousuo1"></text>
+    <navigator open-type="navigate" url="/pages/search/search">你想住在哪？</navigator>
+  </view>
+</view>
+<!-- 推荐房源 -->
+<view class="recommend">
+  <view class="nav">
+    <view class="recommend-search">
+      <view class="searchBox-area" data-index="{{0}}" bind:tap="onShadeDiv">
+        <text>朝向</text>
+        <text class="iconfont font10 {{ arrows[0] }}"></text>
+      </view>
+      <view class="searchBox-area" data-index="{{1}}" bind:tap="onShadeDiv">
+        <text>租赁方式</text>
+        <text class="iconfont font10 {{ arrows[1] }}"></text>
+      </view>
+      <view class="searchBox-area" data-index="{{2}}" bind:tap="onShadeDiv">
+        <text>租期方式</text>
+        <text class="iconfont font10 {{ arrows[2] }}"></text>
+      </view>
+      <view class="searchBox-area" data-index="{{3}}" bind:tap="onShadeDiv">
+        <text>价格段</text>
+        <text class="iconfont font10 {{ arrows[3] }}"></text>
+      </view>
+    </view>
+    <!-- 选择器 -->
+    <view class="shadediv {{show[0]}}">
+      <view wx:for="{{condition.fang_direction}}"  wx:key="item" class="condition_item">
+        <text data-attr="fang_direction" data-id="{{item.id}}" bindtap="shareByhousattr">{{item.name}}</text></view>
+    </view>
+    <view class="shadediv {{show[1]}}">
+      <view wx:for="{{condition.fang_rent_class}}" wx:key="item" class="condition_item">
+        <text data-attr="fang_rent_class" data-id="{{item.id}}" bindtap="shareByhousattr">{{item.name}}</text></view>
+    </view>
+    <view class="shadediv {{show[2]}}">
+      <view wx:for="{{condition.fang_rent_type}}" wx:key="item" class="condition_item">
+        <text data-attr="fang_rent_type" data-id="{{item.id}}" bindtap="shareByhousattr">{{item.name}}</text></view>
+    </view>
+    <view class="shadediv {{show[3]}}">
+      <view class="condition_item"><text style="width:241rpx" data-attr="fang_rent" data-id="0-1500" bindtap="shareByhousattr">1500以下</text></view>
+      <view class="condition_item"><text style="width:241rpx" data-attr="fang_rent" data-id="1500-3000" bindtap="shareByhousattr">1500-3000</text> </view>
+      <view class="condition_item"><text style="width:241rpx" data-attr="fang_rent" data-id="3001-5000" bindtap="shareByhousattr">3000-5000</text> </view>
+      <view class="condition_item"><text style="width:241rpx" data-attr="fang_rent" data-id="5001-8000" bindtap="shareByhousattr">5000-8000</text> </view>
+      <view class="condition_item"><text style="width:241rpx" data-attr="fang_rent" data-id="8001-15000" bindtap="shareByhousattr">8000-15000</text></view>
+      <view class="condition_item"><text style="width:241rpx" data-attr="fang_rent" data-id="15000-100000" bindtap="shareByhousattr">15000以上</text></view>
+    </view>
+  </view>
+  <scroll-view enhanced="true" scroll-top="{{topnum}}" scroll-y="true"  class="sview" bindscroll="enscroll" bindscrolltolower="isBottom">
+    <view class="recommend" wx:for="{{hous}}" wx:key="item">
+      <navigator class="recommend-list" open-type="navigate" url="/pages/fang/fang?id={{item.id}}">
+        <view>
+          <image src="{{item.fand_pic_url}}" />
+        </view>
+        <view class="recommend-list-item">
+          <view class="recommend-list-item-title" style="font-size:13px">{{item.housattr.name}} - {{item.fang_name}}</view>
+          <view class="recommend-list-item-spec" style="font-size:11px">{{item.fang_using_area}}平米 | {{item.shi_ting}}</view>
+          <view class="recommend-list-item-tag">
+            <text class="tag1">押一付三</text>
+            <text class="tag2">免押金</text>
+            <text class="tag3">精装</text>
+          </view>
+          <view class="recommend-list-item-price">
+            <text>{{item.fang_rent}}</text>
+            元/月
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="bottom {{showbottom?'':'hide'}}">
+      <text>o(╥﹏╥)o</text>
+      <view><text> 已经没有更多了</text></view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 回到顶部 -->
+<view class="gototop {{showTotop?'':'hide'}}" bindtap="toTop">
+  <text class="iconfont font30 icon-fanhuidingbu"></text>
+</view>

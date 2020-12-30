@@ -1,0 +1,101 @@
+/* pages/search/search.wxss */
+.input{
+  border: 1rpx solid grey;
+  height: 80rpx;
+  width: 590rpx;
+  float: left;
+  border-radius: 10rpx;
+  padding-left: 10rpx;
+}
+.btn{
+  width: 146rpx;
+  height: 80rpx;
+  float: left;
+  font-size: 36rpx;
+  line-height: 80rpx;
+}
+.one{
+  height: 82rpx;
+}
+/* 没有数据通知 */
+.bottom{
+  text-align: center;
+  color: grey;
+  font-size: 32rpx;
+}
+.hide{
+  display: none;
+}
+.sview{
+  height: 1000rpx;
+}
+.font10 {
+  margin-left: 10rpx;
+  font-size: 10px;
+}
+
+.searchBox-input {
+  display: flex;
+  margin-left: 40rpx;
+  background: #fafafa;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 450rpx;
+  border-radius: 20rpx;
+  padding: 0 30rpx;
+  color: #a4a4a4;
+}
+.searchBox-input text {
+  margin-right: 20rpx;
+}
+
+/* 推荐房源 */
+.recommend {
+  margin-top: 3px;
+  background: #fff;
+  color: #474747;
+}
+.recommend-search {
+  display: flex;
+  justify-content: space-around;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.recommend-list {
+  border-top: 1px solid #cccccc;
+  display: flex;
+  padding: 20rpx;
+}
+.recommend-list image {
+  width: 350rpx;
+  height: 250rpx;
+}
+
+.recommend-list-item {
+  margin-left: 6rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recommend-list-item-spec {
+  color: #ccc;
+  font-size: 14px;
+}
+.recommend-list-item-tag text{
+  margin: 6rpx;
+}
+.recommend-list-item-price {
+  color: red;
+}
+.recommend-list-item-price text{
+  font-weight: bold;
+}
+.gototop{
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+  color: #ccc;
+}
+.font30{
+  font-size: 40px;
+}

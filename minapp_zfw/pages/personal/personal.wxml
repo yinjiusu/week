@@ -1,0 +1,37 @@
+<view class="items">
+  <navigator hover-class="none" class="item" open-type="navigate" url="/pages/editpersonal/editpersonal">
+    <view>头像</view>
+    <view class="headpic">
+      <image src="{{avatar}}" />
+      <text class="iconfont font18 icon-fanhui"></text>
+    </view>
+  </navigator>
+  <navigator hover-class="none" class="item" open-type="navigate" url="/pages/editpersonal/editpersonal">
+    <view>昵称</view>
+    <view>
+      {{nickname}}
+      <text class="iconfont font18 icon-fanhui"></text>
+    </view>
+  </navigator>
+  <navigator hover-class="none" class="item" open-type="navigate" url="/pages/editpersonal/editpersonal">
+    <view>手机号</view>
+    <view>
+      {{phone}}
+      <text class="iconfont font18 icon-fanhui"></text>
+    </view>
+  </navigator>
+  <navigator hover-class="none" class="item" open-type="navigate" url="/pages/editpersonal/editpersonal">
+    <view>性别</view>
+    <view>
+      {{sex}}
+      <text class="iconfont font18 icon-fanhui"></text>
+    </view>
+  </navigator>
+  <navigator hover-class="none" class="item" open-type="navigate" url="/pages/editpersonal/editpersonal">
+    <view>年龄</view>
+    <view>
+      {{age}}
+      <text class="iconfont font18 icon-fanhui"></text>
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/search/search.wxml-->
+<view class="one">
+  <form  bindsubmit="search">
+    <input type="text" name="search" class="input"></input>
+    <button class="btn" type="primary" form-type="submit">搜索</button>
+  </form>
+</view>
+<scroll-view enhanced="true" scroll-top="{{topnum}}" scroll-y="true"  class="sview" bindscroll="enscroll" bindscrolltolower="isBottom">
+    <view class="recommend" wx:for="{{hous}}" wx:key="item">
+      <navigator class="recommend-list" open-type="navigate" url="/pages/fang/fang?id={{item.id}}">
+        <view>
+          <image src="{{item.fand_pic_url}}" />
+        </view>
+        <view class="recommend-list-item">
+          <view class="recommend-list-item-title">{{item.housattr.name}} - {{item.fang_name}}</view>
+          <view class="recommend-list-item-spec">{{item.fang_using_area}}平米 | {{item.shi_ting}}</view>
+          <view class="recommend-list-item-tag">
+            <text class="tag1">押一付三</text>
+            <text class="tag2">免押金</text>
+            <text class="tag3">精装</text>
+          </view>
+          <view class="recommend-list-item-price">
+            <text>{{item.fang_rent}}</text>
+            元/月
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="bottom {{showbottom?'':'hide'}}">
+      <text>o(╥﹏╥)o</text>
+      <view><text> 已经没有更多了</text></view>
+    </view>
+  </scroll-view>
+  <!-- 回到顶部 -->
+<view class="gototop {{showTotop?'':'hide'}}" bindtap="toTop">
+  <text class="iconfont font30 icon-fanhuidingbu"></text>
+</view>

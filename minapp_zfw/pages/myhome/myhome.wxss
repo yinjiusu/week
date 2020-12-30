@@ -1,0 +1,73 @@
+/* 推荐房源 */
+.recommend {
+  margin-top: 3px;
+  background: #fff;
+  color: #474747;
+}
+.recommend-search {
+  display: flex;
+  justify-content: space-around;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.recommend-list {
+  border-top: 1px solid #cccccc;
+  display: flex;
+  padding: 20rpx;
+}
+.recommend-list image {
+  width: 350rpx;
+  height: 250rpx;
+}
+
+.recommend-list-item {
+  margin-left: 6rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recommend-list-item-spec {
+  color: #ccc;
+  font-size: 14px;
+}
+.recommend-list-item-tag text{
+  margin: 6rpx;
+}
+.recommend-list-item-price {
+  color: red;
+}
+.recommend-list-item-price text{
+  font-weight: bold;
+}
+
+.tag1{
+  padding: 10rpx;
+  background: #C5EDDC;
+  color: #5ECC9F;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.tag2{
+  padding: 10rpx;
+  background: #C3EBF0;
+  color: #39BECD;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.tag3{
+  padding: 10rpx;
+  background: #CDE6FE;
+  color: #5AABFD;
+  font-size: 12px;
+  border-radius: 5px;
+}
+/* 回到顶部 */
+.gototop{
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+  color: #ccc;
+}
+.font30{
+  font-size: 40px;
+}

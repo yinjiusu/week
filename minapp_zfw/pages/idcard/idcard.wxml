@@ -1,0 +1,30 @@
+<view>
+  <view class="tip" style="{{show_from?'':'color:green'}}">
+    <text class="iconfont icon-approve"></text>
+    <text>{{text}}</text>
+  </view>
+  <form bindsubmit="fromsubmit">
+    <view>
+      <label>真实姓名</label>
+      <input name="truename" disabled="{{show_from?'':'none'}}" value="{{truename}}" placeholder="{{truename}}" />
+    </view>
+    <view>
+      <label>身份证号</label>
+      <input name="card" disabled="{{show_from?'':'none'}}" type="idcard" value="{{card}}" placeholder="{{card}}" />
+    </view>
+    <view class="tip-msg {{show_from?'':'hide'}}">
+      添加手持身份证照片
+      <text>(照片仅用于身份认证)</text>
+    </view>
+    <block class="{{show_from?'':'hide'}}" wx:for="{{idcard_imgs}}" wx:key="item">
+    <image src="{{item}}" class="idcard_img"></image>
+    </block>
+    <view class="uppic {{show_from?'':'hide'}} {{ show?'':'hide'}}" bindtap="upfile">
+      <text class="iconfont icon-jiahao"></text>
+    </view>
+    <view class="sendbtn {{show_from?'':'hide'}}">
+      提交信息
+      <button type="primary" form-type="submit" >提交信息</button>
+    </view>
+  </form>
+</view>

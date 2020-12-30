@@ -1,0 +1,27 @@
+page{
+  background: #fff;
+  color: #666;
+}
+.items{
+  padding: 20rpx;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.item image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.headpic{
+  display: flex;
+}
+.font18{
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10rpx;
+}

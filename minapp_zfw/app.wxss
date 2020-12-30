@@ -1,0 +1,9 @@
+@import '/common/style/font.wxss';
+page{
+  font-size: 16px;
+  background: #F5F5F5;
+}
+.red{
+  color: red;
+}
+

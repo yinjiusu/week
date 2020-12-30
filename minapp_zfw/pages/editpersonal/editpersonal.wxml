@@ -1,0 +1,50 @@
+<view>
+  <view class="tip" style="color:green">
+    <text class="iconfont icon-approve"></text>
+    <text>编辑个人资料</text>
+  </view>
+  <form bindsubmit="editperson">
+    <view>
+      <label>昵称</label>
+      <input type="text" name="nickname" value="{{formdata.nickname}}" placeholder="昵称" />
+    </view>
+    <view>
+      <label>手机号</label>
+      <input type="number" name="phone" value="{{formdata.phone}}" type="idcard" placeholder="手机号" />
+    </view>
+    <view>
+      <label>年龄</label>
+      <input type="number" name="age" value="{{formdata.age}}" type="idcard" placeholder="年龄" />
+    </view>
+    <view>
+      <label>性别</label>
+      <view wx:if="{{formdata.sex=='先生'}}">
+        <radio-group name="sex">
+        <radio value="先生" checked="true">先生</radio>
+        <radio value="女士">女士</radio>
+      </radio-group>
+      </view>
+      <view wx:else="{{formdata.sex=='女士'}}">
+        <radio-group name="sex">
+        <radio value="先生">先生</radio>
+        <radio value="女士"  checked="true">女士</radio>
+      </radio-group>
+      </view>
+    </view>
+    <view class="tip-msg">
+      更换头像
+      <text>请在下方选择头像</text>
+    </view>
+    <!-- <view class="uppic" bindtap="upfile"> -->
+      
+    <!-- </view> -->
+    <view class="uppic {{show?'':'hide'}}" bindtap="upfile">
+      <text class="iconfont icon-jiahao"></text>
+    </view>
+    <image style="display:flex" class="img" src="{{avatar}}" bindtap="upfile"></image>
+    <view class="sendbtn">
+      提交信息
+      <button type="primary" form-type="submit">提交修改</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,104 @@
+<view class="myhome">
+  <view class="myhome-bg">
+    <image src="" />
+  </view>
+  <view class="home-info">
+    <!-- <view wx:if="{{ user_icon }}==''"> -->
+      
+    <!-- </view> -->
+   <!-- <view wx:else> -->
+    <image src="{{ user_icon }}" />
+    <button class="home-info-accredit {{show?'':'hide'}}" plain="true" open-type="getUserInfo"  bindgetuserinfo="getuser" ></button><text class="home-info-acctext {{show?'':'hide'}}">点击授权</text>
+   <!-- </view> -->
+    <view class="home-info-name">{{nickname}}</view>
+    <view class="home-info-label">{{is_auth}}</view>
+    <view class="home-info-area">
+      <navigator hover-class="none" open-type="navigate" url="/pages/personal/personal">编辑个人信息</navigator>
+    </view>
+  </view>
+</view>
+<view class="home-icon">
+  <view class="home-icon-item">
+    <view class="iconfont font30 icon-shijian"></view>
+    <navigator hover-class="none" open-type="navigate" url="/pages/history/history">看房记录</navigator>
+  </view>
+  <view class="home-icon-item">
+    <view class="iconfont font30 icon-shoucang"></view>
+    <navigator hover-class="none" open-type="navigate" url="/pages/collect/collect">我的收藏</navigator>
+  </view>
+  <view class="home-icon-item">
+    <view class="iconfont font30 icon-geren3"></view>
+    <navigator hover-class="none" open-type="navigate" url="/pages/personal/personal">个人资料</navigator>
+  </view>
+  <view class="home-icon-item">
+    <view class="iconfont font30 icon-shenfenzheng"></view>
+    <navigator hover-class="none" open-type="navigate" url="/pages/idcard/idcard" hover-class="none">身份认证</navigator>
+  </view>
+  <view class="home-icon-item">
+    <view class="iconfont font30 icon-fangzi"></view>
+    <navigator hover-class="none" open-type="navigate" url="/pages/myhome/myhome">我的租房</navigator>
+  </view>
+  <view class="home-icon-item">
+    <view class="iconfont font30 icon-lianxifangdong"></view>
+    <navigator hover-class="none" open-type="navigate" url="/pages/fangmsg/fangmsg" hover-class="none">看房通知</navigator>
+  </view>
+</view>
+<!-- 推荐房源 -->
+<view class="recommend">
+  <view class="recommend-title">推荐房源</view>
+  <swiper style="height:205px" autoplay="{{true}}" circular="{{true}}" interval="{{2000}}">
+    <block wx:for="{{recommend_information}}" wx:key="item">
+    <navigator open-type="navigate" url="/pages/fang/fang?id={{item.id}}">
+    <swiper-item>
+        <view class="recommend-list">
+          <view>
+            <image src="{{item.fand_pic_url}}" />
+          </view>
+          <view class="recommend-list-item">
+          <view class="recommend-list-item-title" style="font-size:13px">{{item.housattr.name}} - {{item.fang_name}}</view>
+          <view class="recommend-list-item-spec" style="font-size:11px">{{item.fang_using_area}}平米 | {{item.shi_ting}}</view>
+          <view class="recommend-list-item-tag">
+            <text class="tag1">押一付三</text>
+            <text class="tag2">免押金</text>
+            <text class="tag3">精装</text>
+          </view>
+          <view class="recommend-list-item-price">
+            <text>{{item.fang_rent}}</text>
+            元/月
+          </view>
+          </view>
+        </view>
+    </swiper-item>
+  </navigator>
+</block>
+  </swiper>
+</view>
+<!-- <view>
+  <view class="recommend-title">推荐房源</view>
+  <swiper  autoplay="{{true}}" circular="{{true}}" interval="{{2000}}">
+    <block wx:for="{{recommend_information}}" wx:key="item">
+    <navigator class="recommend-list" open-type="navigate" url="/pages/fang/fang?id={{item.id}}">
+    <swiper-item>
+        <view class="recommend-list">
+          <view>
+            <image src="{{item.fand_pic_url}}" />
+          </view>
+          <view class="recommend-list-item">
+          <view class="recommend-list-item-title" style="font-size:13px">{{item.housattr.name}} - {{item.fang_name}}</view>
+          <view class="recommend-list-item-spec" style="font-size:11px">{{item.fang_using_area}}平米 | {{item.shi_ting}}</view>
+          <view class="recommend-list-item-tag">
+            <text class="tag1">押一付三</text>
+            <text class="tag2">免押金</text>
+            <text class="tag3">精装</text>
+          </view>
+          <view class="recommend-list-item-price">
+            <text>{{item.fang_rent}}</text>
+            元/月
+          </view>
+          </view>
+        </view>
+    </swiper-item>
+    </navigator>
+  </block>
+  </swiper>
+</view> -->

@@ -1,0 +1,51 @@
+<!-- 看房记录 -->
+<view class="buttonset">
+  <button class="btn-left" data-type="hous" bindtap="changeType" type="{{now?'primary':'none'}}">房源</button>
+  <button class="btn-right" data-type="article" bindtap="changeType" type="{{now?'none':'primary'}}">文章</button>
+</view>
+<view class="recommend" wx:if="{{type=='hous'}}">
+  <scroll-view enhanced="true" scroll-top="{{topnum}}" scroll-y="true"  class="sview" bindscroll="enscroll">
+    <view class="recommend">
+      <block wx:for="{{currentData}}" wx:key="item">
+        <navigator class="recommend-list" open-type="navigate" url="/pages/fang/fang?id={{item.id}}">
+          <view>
+          <image src="{{item.fand_pic_url}}" />
+        </view>
+        <view class="recommend-list-item">
+          <view class="recommend-list-item-title">{{item.housattr.name}} - {{item.fang_name}}</view>
+          <view class="recommend-list-item-spec">{{item.fang_using_area}}平米 | {{item.shi_ting}}</view>
+          <view class="recommend-list-item-tag">
+            <text class="tag1">押一付三</text>
+            <text class="tag2">免押金</text>
+            <text class="tag3">精装</text>
+          </view>
+          <view class="recommend-list-item-price">
+            <text>{{item.fang_rent}}</text>
+            元/月
+          </view>
+        </view>
+      </navigator>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<view class="recommend" wx:else>
+  <scroll-view enhanced="true" scroll-top="{{topnum}}" scroll-y="true"  class="sview" bindscroll="enscroll" bindscrolltolower="isBottom">
+    <block wx:for="{{currentData}}" wx:key="item">
+  <navigator class="recommend-list" open-type="navigate" url="/pages/newsdetail/newsdetail?id={{item.id}}">
+    <view>
+      <image src="{{item.image}}" />
+    </view>
+    <view class="recommend-list-item">
+      <view class="recommend-list-item-title">{{item.title}}</view>
+      <view class="recommend-list-item-desc" style="font-size:28rpx">{{item.spanish}}</view>
+      <view class="recommend-list-item-date">{{item.created_at}}</view>
+    </view>
+  </navigator>
+</block>
+  </scroll-view>
+</view>
+<!-- 回到顶部 -->
+<view class="gototop  {{showTotop?'':'hide'}}" bindtap="toTop">
+  <text class="iconfont font30 icon-fanhuidingbu"></text>
+</view>

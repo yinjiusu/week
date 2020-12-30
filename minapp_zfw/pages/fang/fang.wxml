@@ -1,0 +1,100 @@
+<!-- 幻灯片 -->
+<swiper class="swiper-img" autoplay="true" circular="{{true}}" indicator-dots="{{true}}"> 
+<block wx:for="{{hous.fand_pic_url_arr}}" wx:key="item">
+  <swiper-item>
+    <image src="{{item}}" />
+  </swiper-item>
+</block>
+</swiper>
+
+<!-- 标题 -->
+<view class="padding20">
+  <view class="tagtitle">{{hous.fang_name}}</view>
+  <view class="taglist">
+    <view>
+      <text class="tag1">押一付三</text>
+      <text class="tag2">免押金</text>
+      <text class="tag3">精装</text>
+    </view>
+    <view class="tagdate">{{hous.created_at}}</view>
+  </view>
+</view>
+<view class="padding20 options">
+  <view class="options-item">
+    <view class="options-red">{{hous.fang_rent}}/月</view>
+    <view>租金(付3押1)</view>
+  </view>
+  <view class="options-item">
+    <view class="options-red">{{hous.shi_ting_wei}}</view>
+    <view>房型</view>
+  </view>
+  <view class="options-item">
+    <view class="options-red">{{hous.fang_using_area}}平米</view>
+    <view>面积</view>
+  </view>
+</view>
+<!-- 房屋选项 -->
+<view class="padding20 fang-opt">
+  <view class="fang-opt-item">
+    <text>装修：</text>
+    <text>精装修</text>
+  </view>
+  <view class="fang-opt-item">
+    <text>朝向：</text>
+    <text>{{hous.fang_direction.name}}</text>
+  </view>
+  <view class="fang-opt-item">
+    <text>楼层：</text>
+    <text>{{hous.fang_floor}}层</text>
+  </view>
+  <view class="fang-opt-item">
+    <text>类型：</text>
+    <text>普通住宅</text>
+  </view>
+  <view class="fang-opt-item">
+    <text>年代：</text>
+    <text>{{hous.fang_year}}年</text>
+  </view>
+</view>
+<!-- 地图 -->
+<view class="map-box">
+  <map id="map" latitude="{{hous.latitude}}" longitude="{{hous.longitude}}" scale="14" markers="{{markers}}"></map>
+</view>
+<!-- 房屋配套 -->
+<view class="fangwoptao-title">房屋配套</view>
+<view class="fangwoptao">
+  <block wx:for="{{hous.fang_config}}" wx:key="item">
+    <view class="fangwoptao-item">
+      <image class="housattr_icon" mode="widthFix" src="{{item.icon_url}}"></image>
+    <!-- <view class=" icon-yigui-hui"></view> -->
+    <view>{{item.name}}</view>
+  </view>
+  </block>
+</view>
+<!-- 房源概况 -->
+<view class="fangyuan">
+  <view class="fangyuan-title">房源概况</view>
+  <view>
+    <view class="fangyuan-img">
+      <view>
+        <image src="{{hous.owner.headphoto_url}}"/>
+      </view>
+      <view class="fangyuan-label">
+        <view>{{hous.owner.name}}</view>
+        <view class="red" wx:if="{{hous.owner.idNumber}}">已认证房主</view>
+        <view class="red" wx:else="{{hous.owner.idNumber}}">未认证房主</view>
+      </view>
+      <view class="callphone" data-phone="{{hous.owner.phone}}" bindtap="callphone">打电话</view>
+    </view>
+    <view class="fangyuan-body">
+      <rich-text nodes="{{hous.fang_body}}"></rich-text>
+    </view>
+  </view>
+</view>
+<!-- 底部功能菜单 -->
+<view class="footer-menu">
+  <view data-id="{{hous.id}}" bindtap="{{collect_on?'collect_off':'collect'}}">{{collect_on?'取消收藏':'添加收藏'}}</view>
+  <button class="btn" open-type="share" type="default" >分享好友</button>
+  <view>在线咨询</view>
+  <view data-phone="{{hous.owner.phone}}" bindtap="callphone">电话预约</view>
+</view>

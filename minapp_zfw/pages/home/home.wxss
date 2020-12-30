@@ -1,0 +1,143 @@
+.myhome {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.myhome-bg image {
+  width: 750rpx;
+  height: 382rpx;
+}
+.home-info {
+  background: #fff;
+  width: 520rpx;
+  height: 240rpx;
+  box-shadow: 1px 1px 5px #a4a4a4;
+  position: absolute;
+  bottom: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-info image {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: -40rpx;
+  left: 210rpx;
+  border: 10rpx solid #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px #a4a4a4;
+}
+.home-info-accredit{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: -40rpx;
+  left: 210rpx;
+  border: 10rpx solid rgb(252, 250, 250);
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px #a4a4a4;
+  font-size: 10rpx;
+}
+.hide{
+  display: none;
+}
+.home-info-acctext{
+  font-size: 23rpx;
+  position: absolute;
+  top: -10rpx;
+  left: 216rpx;
+}
+.font10 {
+  margin-left: 10rpx;
+  font-size: 10px;
+}
+.home-info-name{
+  margin-top: 55rpx;
+}
+.home-info-label{
+  background: #21B97A;
+  color: #fff;
+  font-size: 14px;
+  margin: 15rpx 0px;
+  padding: 5rpx 40rpx 5rpx 40rpx;
+  border-radius: 50rpx;
+}
+.home-info-area{
+  font-size: 14px;
+  color: #999;
+}
+
+.home-icon{
+  margin-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  color: #888;
+  text-align: center;
+  justify-content: space-around;
+  height: 300rpx;
+}
+.home-icon-item{
+  width: 200rpx;
+}
+.font30{
+  font-size: 30px;
+}
+
+.recommend-title{
+  font-size: 22px;
+  font-weight: bold;
+}
+.recommend-list {
+  border-top: 1px solid #cccccc;
+  display: flex;
+  padding: 10rpx;
+}
+.recommend-list image {
+  width: 350rpx;
+  height: 250rpx;
+}
+
+.recommend-list-item {
+  margin-left: 6rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recommend-list-item-spec {
+  color: #ccc;
+  font-size: 14px;
+}
+.recommend-list-item-tag text{
+  margin: 6rpx;
+}
+.recommend-list-item-price {
+  color: red;
+}
+.recommend-list-item-price text{
+  font-weight: bold;
+}
+
+.tag1{
+  padding: 10rpx;
+  background: #C5EDDC;
+  color: #5ECC9F;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.tag2{
+  padding: 10rpx;
+  background: #C3EBF0;
+  color: #39BECD;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.tag3{
+  padding: 10rpx;
+  background: #CDE6FE;
+  color: #5AABFD;
+  font-size: 12px;
+  border-radius: 5px;
+}

@@ -1,0 +1,218 @@
+/* 幻灯片 */
+page {
+  background: white;
+}
+.swiper-img image {
+  width: 750rpx;
+  height: 350rpx;
+}
+/* 标题 */
+.tagtitle {
+  margin-top: 20rpx;
+}
+.taglist {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.tag1 {
+  padding: 10rpx;
+  background: #c5eddc;
+  color: #5ecc9f;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-right: 10rpx;
+}
+.tag2 {
+  padding: 10rpx;
+  background: #c3ebf0;
+  color: #39becd;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-right: 10rpx;
+}
+.tag3 {
+  padding: 10rpx;
+  background: #cde6fe;
+  color: #5aabfd;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-right: 10rpx;
+}
+.padding20 {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #a4a4a4;
+}
+.tagdate {
+  font-size: 14px;
+  color: #a4a4a4;
+}
+
+/* 选项 */
+.options {
+  padding-bottom: 10rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.options-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.options-red {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+/* 房屋选项 */
+.fang-opt {
+  margin-top: 16rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 10rpx;
+  height: 160rpx;
+}
+.fang-opt-item {
+  width: 300rpx;
+  text-align: left;
+}
+.fang-opt-item text:nth-of-type(1) {
+  color: #ccc;
+}
+
+/* 地图 */
+.map-box {
+  margin-bottom: 20rpx;
+}
+#map {
+  width: 750rpx;
+  height: 200px;
+}
+/* 房屋配套 */
+.font36 {
+  font-size: 36px;
+}
+ /* button[plain]{ 
+  border: 0;
+  padding: 0;
+  margin: 0;
+} */
+.btn{
+  width: 160rpx;
+  border-left: 1px solid #999;
+  text-align: center;
+  /* border-radius: 98rpx; */
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  line-height: 100rpx;
+  color: #999999;
+  background: #fff;
+}
+.btn::after{
+  border: none;
+}
+.fangwoptao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 300rpx; */
+  color: #a4a4a4;
+  border-bottom: 1px solid #a4a4a4;
+  padding-bottom: 20rpx;
+}
+.housattr_icon{
+width: 112rpx;
+}
+.fangwoptao-item {
+  width: 150rpx;
+  text-align: center;
+}
+.fangwoptao-title {
+  font-size: 22px;
+  padding-left: 10rpx;
+  border-bottom: 1px solid #a4a4a4;
+  padding-bottom: 20rpx;
+}
+/* 房源概况 */
+.fangyuan-title {
+  font-size: 22px;
+  padding-top: 20rpx;
+  padding-left: 10rpx;
+  padding-bottom: 20rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1px solid #a4a4a4;
+}
+.fangyuan{
+  padding-left: 10rpx;
+}
+.fangyuan-img {
+  display: flex;
+  position: relative;
+}
+.fangyuan-img image {
+  width: 160rpx;
+  height: 160rpx;
+}
+.fangyuan-label {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.callphone{
+  color: #21B97A;
+  font-weight: bold;
+  border: 1px solid #21B97A;
+  border-radius: 5px;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 120rpx;
+  text-align: center;
+  position: absolute;
+  right: 20rpx;
+  top:45rpx;
+}
+.fangyuan-body{
+  margin-top: 10rpx;
+  margin-bottom: 110rpx;
+}
+/* 底部菜单 */
+.footer-menu{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  color: #999999;
+  background: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+}
+.footer-menu view:nth-of-type(1){
+  margin-left: 30rpx;
+  border: none;
+  padding: 0;
+  border-right: 1px solid #999;
+}
+.footer-menu view{
+  width: 160rpx;
+  border-left: 1px solid #999;
+  text-align: center;
+}
+.footer-menu view:nth-last-of-type(1){
+  background: #21B97A;
+  width: 260rpx;
+  text-align: center;
+  color: #fff;
+  padding: 0
+}
+

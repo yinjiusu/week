@@ -1,0 +1,15 @@
+<scroll-view class="sview" scroll-y="{{true}}">
+  <block wx:for="{{notices}}" wx:key="item">
+ <view class="items">
+    <view class="item">
+      <view>{{item.owner.name}}</view>
+      <view>{{item.dtime}}</view>
+      <view>{{item.cnt}}</view>
+    </view>
+    <view class="calltel" data-index="{{item.owner.phone}}" bindtap="tapname">
+      <text class="iconfont icon-dianhua" ></text>
+      联系看房
+    </view>
+  </view>
+  </block>
+</scroll-view>
